@@ -1,0 +1,32 @@
+:root {
+  /* ===== Paleta oscura ===== */
+  --bg: #080808;
+  --bg-soft: #0d0d0d;
+  --surface: #111111;
+  --surface-2: #161616;
+  --surface-3: #1c1c1c;
+  --text: #ede9e3;
+  --text-strong: #f7f4ef;
+  --muted: #a5a099;
+  --muted-2: #7d7871;
+  --gold: #d4af37;
+  --gold-soft: #c9a227;
+  --red: #c1121f;
+  --red-bright: #e01b2b;
+  --line: rgb(255 255 255 / .12);
+  --line-gold: rgb(212 175 55 / .28);
+
+  /* ===== Tipografía ===== */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-brand: "Cinzel", "Times New Roman", serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+
+  /* ===== Formas y movimiento ===== */
+  --radius: 18px;
+  --radius-sm: 10px;
+  --shadow-card: 0 28px 70px -40px rgb(0 0 0 / .95);
+  --shadow-red: 0 0 0 1px rgb(193 18 31 / .45), 0 12px 40px -12px rgb(193 18 31 / .7);
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --wrap: min(1200px, 100% - 2.5rem);
+  --header-h: 84px;
+}

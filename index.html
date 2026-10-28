@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <title>Shaddai Barber Spa</title>
+  <meta name="description" content="Barbería y spa para hombres en Villavicencio. Cortes, rituales de barba y cuidado facial en un espacio pensado para tu evolución.">
+  <meta property="og:title" content="Shaddai Barber Spa">
+  <meta property="og:description" content="Donde el corte no es solo una necesidad, sino un ritual de evolución personal.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/BARBER.jpeg" fetchpriority="high">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <span class="sentinel" data-sentinel aria-hidden="true"></span>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-row">
+      <a class="wordmark" href="index.html" aria-label="Shaddai Barber Spa, inicio">SHADDAI<small>Barber Spa</small></a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#filosofia">Filosofía</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="auth-area" id="auth-area"></div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-label="Presentación">
+      <picture class="hero-bg">
+        <img src="assets/img/BARBER.jpeg" alt="" width="1376" height="768" fetchpriority="high" decoding="async">
+      </picture>
+
+      <div class="hero-inner">
+        <p class="eyebrow eyebrow-red eyebrow-rule" data-hero>Buscabas confianza y acá la encontraste</p>
+        <h1 class="hero-title" data-hero>SHADDAI</h1>
+        <p class="hero-sub" data-hero>Donde el corte no es solo una necesidad, sino un <em>ritual de evolución personal</em>.</p>
+        <div class="hero-ctas" data-hero>
+          <a class="btn btn-red" href="cuenta.html?next=agenda.html%23reservar" data-book>Agendar ahora</a>
+          <a class="btn btn-outline" href="#servicios">Servicios</a>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#filosofia"><span>Descubre</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <section class="section" id="filosofia">
+      <div class="wrap split">
+        <div class="split-copy" data-reveal>
+          <p class="eyebrow eyebrow-red">Nuestra filosofía</p>
+          <h2>Evolución <em>constante</em></h2>
+          <p>En Shaddai Barber Spa no solo cortamos cabello: esculpimos identidad. Nacimos con la firme convicción de que el cuidado personal masculino merece un nivel de detalle absoluto.</p>
+          <p>Shaddai significa cuidado y refugio. Esa es nuestra promesa: herramientas de precisión, productos de primer nivel y una técnica pulida para que cada visita sea superior a la anterior. No seguimos tendencias: las adaptamos a tu estructura.</p>
+          <div class="stats">
+            <div><strong>100%</strong><span>Atención premium</span></div>
+            <div><strong>+5</strong><span>Años de maestría</span></div>
+          </div>
+        </div>
+        <figure class="split-media" data-reveal>
+          <img src="assets\img\SHADDAILOCAL.jpg" alt="Detalle de un perfilado de barba en Shaddai Barber Spa" width="1200" height="1500" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="eyebrow eyebrow-red">Pilar fundamental</span>
+            <blockquote>“La perfección no es un destino, es un hábito.”</blockquote>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section soft" id="servicios">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow eyebrow-red">Nuestro menú</p>
+            <h2>Servicios <em>a medida</em></h2>
+          </div>
+          <p class="section-note">Cortes, rituales de barba y cuidado facial. Elige el que necesitas y reserva en cuatro pasos.</p>
+        </div>
+        <div class="menu" id="catalogo"></div>
+      </div>
+    </section>
+
+    <section class="section" id="trabajos">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow eyebrow-red">Trabajos reales</p>
+            <h2>El resultado <em>habla</em></h2>
+          </div>
+          <p class="section-note">Cortes, barbas y rituales hechos en casa. Cada trabajo es una firma.</p>
+        </div>
+        <div class="gallery-grid" id="galeria"></div>
+      </div>
+    </section>
+
+    <section class="section soft" id="contacto">
+      <div class="wrap contact-grid">
+        <div class="contact-card" data-reveal>
+          <p class="eyebrow eyebrow-red">Visítanos</p>
+          <h2>Tu próximo <em>ritual</em></h2>
+          <div class="info" id="contacto-info"></div>
+        </div>
+        <div class="map" id="mapa" data-reveal></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="footer-brand">SHADDAI<small>Barber Spa</small></div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="#filosofia">Filosofía</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="cuenta.html">Mi cuenta</a>
+      </nav>
+      <p class="footer-meta">© <span data-year>2026</span> Shaddai Barber Spa</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

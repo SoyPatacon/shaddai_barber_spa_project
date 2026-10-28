@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <title>Mi cuenta · Shaddai Barber Spa</title>
+  <meta name="description" content="Crea tu cuenta en Shaddai Barber Spa para agendar y administrar tus citas.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="page-auth">
+  <span class="sentinel" data-sentinel aria-hidden="true"></span>
+
+  <header class="site-header is-solid" data-header>
+    <div class="wrap header-row">
+      <a class="wordmark" href="index.html" aria-label="Shaddai Barber Spa, inicio">SHADDAI<small>Barber Spa</small></a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="index.html#filosofia">Filosofía</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#trabajos">Trabajos</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="auth-area" id="auth-area"></div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <figure class="auth-media">
+      <img src="assets/img/filosofia.jpg" alt="" width="1200" height="1500" decoding="async">
+      <figcaption class="auth-media-copy">
+        <p class="eyebrow eyebrow-red">Shaddai Barber Spa</p>
+        <p class="auth-quote">“El detalle no se improvisa: se repite hasta ser hábito.”</p>
+        <p class="auth-sign">Bogotá · Colombia</p>
+      </figcaption>
+    </figure>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <p class="eyebrow eyebrow-red">Tu cuenta</p>
+        <h1 id="auth-title">Bienvenido de nuevo</h1>
+        <p class="auth-intro" id="auth-intro">Entra para agendar, revisar y administrar tus citas.</p>
+
+        <div id="auth-session" class="session-panel" hidden></div>
+
+        <div id="auth-forms">
+          <div class="tabs" role="tablist" aria-label="Acceso a la cuenta">
+            <button type="button" role="tab" id="tab-login" aria-controls="form-login" aria-selected="true" data-tab="login">Ingresar</button>
+            <button type="button" role="tab" id="tab-register" aria-controls="form-register" aria-selected="false" data-tab="register">Crear cuenta</button>
+          </div>
+
+          <form id="form-login" class="auth-form" role="tabpanel" aria-labelledby="tab-login" novalidate>
+            <div class="field">
+              <label for="login-email">Correo</label>
+              <input id="login-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+            </div>
+            <div class="field">
+              <label for="login-pass">Contraseña</label>
+              <div class="pass-wrap">
+                <input id="login-pass" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+                <button class="pass-toggle" type="button" data-toggle-pass aria-label="Mostrar contraseña">Ver</button>
+              </div>
+            </div>
+            <p class="form-msg" role="alert" aria-live="polite"></p>
+            <button class="btn btn-red btn-block" type="submit">Entrar</button>
+          </form>
+
+          <form id="form-register" class="auth-form" role="tabpanel" aria-labelledby="tab-register" novalidate hidden>
+            <div class="field">
+              <label for="reg-nombre">Nombre completo</label>
+              <input id="reg-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="field">
+              <label for="reg-email">Correo</label>
+              <input id="reg-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+            </div>
+            <div class="field">
+              <label for="reg-tel">Teléfono</label>
+              <input id="reg-tel" name="telefono" type="tel" autocomplete="tel" placeholder="300 000 0000" required>
+            </div>
+            <div class="field">
+              <label for="reg-pass">Contraseña</label>
+              <div class="pass-wrap">
+                <input id="reg-pass" name="password" type="password" autocomplete="new-password" placeholder="Mínimo 8 caracteres" required>
+                <button class="pass-toggle" type="button" data-toggle-pass aria-label="Mostrar contraseña">Ver</button>
+              </div>
+            </div>
+            <p class="form-msg" role="alert" aria-live="polite"></p>
+            <button class="btn btn-red btn-block" type="submit">Crear mi cuenta</button>
+          </form>
+
+          <p class="auth-foot">Tus datos se guardan solo en este navegador mientras probamos el sistema. <a class="link" href="index.html">Volver al inicio</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cuenta.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

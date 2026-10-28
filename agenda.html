@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <title>Mi agenda · Shaddai Barber Spa</title>
+  <meta name="description" content="Agenda y administra tus citas en Shaddai Barber Spa.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="page-app">
+  <span class="sentinel" data-sentinel aria-hidden="true"></span>
+
+  <header class="site-header is-solid" data-header>
+    <div class="wrap header-row">
+      <a class="wordmark" href="index.html" aria-label="Shaddai Barber Spa, inicio">SHADDAI<small>Barber Spa</small></a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="index.html#filosofia">Filosofía</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#trabajos">Trabajos</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="auth-area" id="auth-area"></div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <div class="wrap">
+      <div class="app-head">
+        <div>
+          <p class="eyebrow eyebrow-red">Mi agenda</p>
+          <h1>Hola, <span id="user-name">…</span></h1>
+        </div>
+        <a class="btn btn-outline btn-sm" href="index.html">Volver al inicio</a>
+      </div>
+
+      <div class="legacy-banner" id="legacy-banner" hidden>
+        <p>Tienes citas guardadas de la versión anterior de la web.</p>
+        <button class="btn btn-ghost btn-sm" type="button" data-import-legacy>Importarlas a mi cuenta</button>
+      </div>
+
+      <div class="app-grid">
+        <section class="panel" id="reservar">
+          <h2 class="panel-title">Agendar una cita<small>Servicio · profesional · fecha · confirmación</small></h2>
+          <div id="reserva"></div>
+        </section>
+
+        <aside class="panel side">
+          <h2 class="panel-title">Mis citas<small id="citas-count">Sin citas próximas</small></h2>
+          <div id="citas" class="citas"></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/agenda.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
