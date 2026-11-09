@@ -54,8 +54,10 @@
   const mapa = document.getElementById("mapa");
   if (mapa) {
     const C = D.contacto;
-    mapa.innerHTML = C.mapa
-      ? `<iframe title="Mapa de Shaddai Barber Spa" loading="lazy" src="https://www.google.com/maps?q=${encodeURIComponent(C.mapa)}&output=embed"></iframe>`
+    // Prioriza la ficha exacta del lugar; si no existe, cae a una búsqueda por dirección.
+    const src = C.mapaEmbed || (C.mapa ? `https://www.google.com/maps?q=${encodeURIComponent(C.mapa)}&output=embed` : "");
+    mapa.innerHTML = src
+      ? `<iframe title="Ubicación de Shaddai Barber Spa en Google Maps" src="${esc(src)}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`
       : `<p>El mapa aparece cuando agregues la dirección en <code>js/data.js</code>.</p>`;
   }
 })();

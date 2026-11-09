@@ -2,33 +2,34 @@
    Los valores marcados como ilustrativos son de ejemplo: reemplázalos por los reales. */
 window.SHADDAI = {
   contacto: {
-    whatsapp: "573000000000",   // código de país + número, sin signos
-    correo: "",
-    direccion: "",              // ej.: "Calle 00 # 00-00, Ciudad"
-    mapa: "",                   // misma dirección o nombre del lugar para Google Maps
-    ciudad: "Bogotá · Colombia"
+    whatsapp: "573227837126",   // código de país + número, sin signos
+    correo: "ShaddaiBarber@gmail.com",
+    direccion: "Cl. 4 #15-17 |  Barrio Hacaritama",              // ej.: "Calle 00 # 00-00, Ciudad"
+    // Ficha oficial del lugar. Esta URL se copia desde Google Maps › Compartir › Insertar un mapa.
+    mapaEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.71683025936494!2d-73.61532524977096!3d4.127669750757571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e2f006ceb18a1%3A0x793a1233abe05301!2sShaddai%20Barber%20Spa%20%7C%20Hacaritama!5e0!3m2!1ses-419!2sco!4v1793225197545!5m2!1ses-419!2sco",
+    mapa: "",                   // respaldo: dirección o nombre si no hay mapaEmbed
+    ciudad: "Villavicencio · Colombia"
   },
 
   // Horario ilustrativo. Clave = día (0 domingo … 6 sábado); [apertura, cierre]; null = cerrado.
-  horario: { 0: null, 1: ["09:00", "19:00"], 2: ["09:00", "19:00"], 3: ["09:00", "19:00"], 4: ["09:00", "19:00"], 5: ["09:00", "19:00"], 6: ["09:00", "17:00"] },
-  intervalo: 30, // minutos entre turnos
+  horario: { 0: null, 1: ["07:00", "20:00"], 2: ["07:00", "20:00"], 3: ["07:00", "20:00"], 4: ["07:00", "20:00"], 5: ["07:00", "20:00"], 6: ["07:00", "20:00"] },
+  intervalo: 60, // minutos entre turnos
 
-  barberos: ["Barbero 1", "Barbero 2"], // ilustrativo: pon los nombres reales
+  barberos: ["Yeison Saavedra", "Gustavo Petro"], // ilustrativo: pon los nombres reales
 
   // precio: null muestra "Por confirmar". Duraciones (min) ilustrativas.
   categorias: [
-    { nombre: "Corte y estilo", items: [
-      { id: "corte", nombre: "Corte clásico", desc: "Tijera y máquina, con lavado y peinado final.", min: 40, precio: null },
-      { id: "degradado", nombre: "Degradado", desc: "Transición limpia a la altura que prefieras.", min: 45, precio: null }
+    { nombre: "Cortes de cabello", items: [
+      { id: "corte", nombre: "Corte clásico", desc: "Corte de cabello con lavado, peinado y mascarilla facial.", min: 60, precio: 24000 },
+      { id: "corte_cejas", nombre: "Corte + cejas", desc: "Corte de cabello y diseño de cejas con lavado, peinado y mascarilla facial.", min: 65, precio: 26000 }
     ]},
-    { nombre: "Barba y ritual", items: [
-      { id: "barba", nombre: "Perfilado de barba", desc: "Diseño, aceites y acabado a navaja.", min: 30, precio: null },
-      { id: "afeitado", nombre: "Afeitado con toalla caliente", desc: "Vapor, espuma y navaja, sin prisa.", min: 40, precio: null },
-      { id: "ritual", nombre: "Ritual Shaddai", desc: "Corte, barba y facial en una sola visita.", min: 90, precio: null }
+    { nombre: "Ritual de barba", items: [
+      { id: "barba", nombre: "Perfilado de barba", desc: "Diseño y acabado a navaja mas exfoliación.", min: 30, precio: 18000 },
+      { id: "exfoliacion", nombre: "EJEMPLO", desc: "(DESCRIPCIÖN DEL SERVICIO).", min: 10, precio: 9999 },
     ]},
-    { nombre: "Cuidado facial", items: [
-      { id: "facial", nombre: "Limpieza facial", desc: "Exfoliación y mascarilla para una piel tranquila.", min: 40, precio: null },
-      { id: "cejas", nombre: "Cejas y contorno", desc: "Definición suave y natural.", min: 15, precio: null }
+    { nombre: "Manicure", items: [
+      { id: "semi", nombre: "Semipermanente", desc: "Diseño con acabado semipermanente en manos y pies.", min: 80, precio: 80000 },
+      { id: "tradicional", nombre: "Tradicional", desc: "Diseño con esmalte tradicional en manos y pies.", min: 60, precio: 55000 }
     ]}
   ],
 
